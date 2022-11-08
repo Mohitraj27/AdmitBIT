@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/dell/AndroidStudioProjects/SE_firebase/app/src/main/res/drawable/ic_baseline_login_24.xml" value="0.265" />
+        <entry key="..\:/Users/dell/AndroidStudioProjects/SE_firebase/app/src/main/res/layout/activity_admin_login.xml" value="0.265625" />
+        <entry key="..\:/Users/dell/AndroidStudioProjects/SE_firebase/app/src/main/res/layout/activity_admin_sign_up.xml" value="0.265625" />
+        <entry key="..\:/Users/dell/AndroidStudioProjects/SE_firebase/app/src/main/res/layout/activity_admission_withdrawal.xml" value="0.1" />
+        <entry key="..\:/Users/dell/AndroidStudioProjects/SE_firebase/app/src/main/res/layout/activity_allotment_list.xml" value="0.265625" />
+        <entry key="..\:/Users/dell/AndroidStudioProjects/SE_firebase/app/src/main/res/layout/activity_allotment_list_campus.xml" value="0.264" />
+        <entry key="..\:/Users/dell/AndroidStudioProjects/SE_firebase/app/src/main/res/layout/activity_application_form.xml" value="0.265625" />
+        <entry key="..\:/Users/dell/AndroidStudioProjects/SE_firebase/app/src/main/res/layout/activity_contact_us.xml" value="0.264" />
+        <entry key="..\:/Users/dell/AndroidStudioProjects/SE_firebase/app/src/main/res/layout/activity_counselling.xml" value="0.2" />
+        <entry key="..\:/Users/dell/AndroidStudioProjects/SE_firebase/app/src/main/res/layout/activity_document_verfication.xml" value="0.264" />
+        <entry key="..\:/Users/dell/AndroidStudioProjects/SE_firebase/app/src/main/res/layout/activity_fill_form.xml" value="0.176" />
+        <entry key="..\:/Users/dell/AndroidStudioProjects/SE_firebase/app/src/main/res/layout/activity_lateral_entry.xml" value="0.265625" />
+        <entry key="..\:/Users/dell/AndroidStudioProjects/SE_firebase/app/src/main/res/layout/activity_login.xml" value="0.17073170731707318" />
+        <entry key="..\:/Users/dell/AndroidStudioProjects/SE_firebase/app/src/main/res/layout/activity_main.xml" value="0.3117359413202934" />
+        <entry key="..\:/Users/dell/AndroidStudioProjects/SE_firebase/app/src/main/res/layout/activity_notification_alert.xml" value="0.265625" />
+        <entry key="..\:/Users/dell/AndroidStudioProjects/SE_firebase/app/src/main/res/layout/activity_nri_admission.xml" value="0.264" />
+        <entry key="..\:/Users/dell/AndroidStudioProjects/SE_firebase/app/src/main/res/layout/activity_programs_offered.xml" value="0.2515625" />
+        <entry key="..\:/Users/dell/AndroidStudioProjects/SE_firebase/app/src/main/res/layout/activity_register.xml" value="0.264" />
+        <entry key="..\:/Users/dell/AndroidStudioProjects/SE_firebase/app/src/main/res/layout/activity_semester_intent.xml" value="0.264" />
+        <entry key="..\:/Users/dell/AndroidStudioProjects/SE_firebase/app/src/main/res/layout/admin_login_layout.xml" value="0.26458333333333334" />
+        <entry key="..\:/Users/dell/AndroidStudioProjects/SE_firebase/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.135" />
+        <entry key="..\:/Users/dell/AndroidStudioProjects/SE_firebase/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.135" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

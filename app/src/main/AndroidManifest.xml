@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.se_firebase">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SE_firebase"
+        tools:targetApi="31">
+        <activity
+            android:name=".fill_form"
+            android:exported="false"
+            android:label="Application Form"/>
+        <activity
+            android:name=".Allotment_list_campus"
+            android:exported="false" />
+        <activity
+            android:name=".Semester_intent"
+            android:exported="false"
+            android:label="Your Current Semester" />
+        <activity
+            android:name=".Admin_signUp"
+            android:exported="false"
+            android:label="Create your Admin Account"
+            android:parentActivityName=".Admin_login" />
+        <activity
+            android:name=".Admin_login"
+            android:exported="false"
+            android:label="Admin Login" />
+        <activity
+            android:name=".contact_us"
+            android:exported="false"
+            android:label="Contact Us"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Lateral_entry"
+            android:exported="false"
+            android:label="Lateral Entry"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Allotment_list"
+            android:exported="false"
+            android:label="Allotment List"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Application_Form"
+            android:exported="false"
+            android:label="Select your Campus"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".admission_withdrawal"
+            android:exported="false"
+            android:label="Admission Withdrawal"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".NRI_Admission"
+            android:exported="false"
+            android:label="NRI Admission"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Counselling"
+            android:exported="false"
+            android:label="Counselling Details"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Document_verfication"
+            android:exported="true"
+            android:label="Document Verification"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Programs_offered"
+            android:exported="false"
+            android:label="Programs Offered"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Notification_alert"
+            android:exported="false"
+            android:label="Notification Alert"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false"
+            android:label="Create Your User Account" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false"
+            android:label="User Login" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="Admission Module">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
