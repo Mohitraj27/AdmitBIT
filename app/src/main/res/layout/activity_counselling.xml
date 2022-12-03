@@ -64,7 +64,7 @@
 
         <Button
             android:layout_width="170dp"
-            android:onClick="submit_choice_filling"
+            android:id="@+id/submit_choice_filling"
             android:layout_marginStart="190dp"
             android:layout_marginTop="120dp"
             android:layout_height="50dp"
@@ -113,7 +113,7 @@
             android:layout_height="50dp"
             android:layout_marginStart="190dp"
             android:layout_marginTop="120dp"
-            android:onClick="seat_acceptance"
+            android:id="@+id/seat_acceptance"
             android:text="Submit Details" />
     </androidx.cardview.widget.CardView>
 
@@ -155,7 +155,7 @@
 
         <Button
             android:layout_width="170dp"
-            android:onClick="submit_upgradtaion"
+            android:id="@+id/submit_upgradtaion"
             android:layout_marginStart="190dp"
             android:layout_marginTop="120dp"
             android:layout_height="50dp"
@@ -201,7 +201,7 @@
 
         <Button
             android:layout_width="170dp"
-            android:onClick="fee_payment"
+            android:id="@+id/fee_payment"
             android:layout_marginStart="190dp"
             android:layout_marginTop="120dp"
             android:layout_height="50dp"

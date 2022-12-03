@@ -7,10 +7,13 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 
 public class Counselling extends AppCompatActivity {
 
+
+    private Button Seat_acceptance,Choice_filling,seat_upgrdation,fee_payment,getChoice_filling;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -70,26 +73,20 @@ public class Counselling extends AppCompatActivity {
         s3.setAdapter(adapter3);
 
 
+
+        Choice_filling=findViewById(R.id.submit_choice_filling);
+        Choice_filling.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(Counselling.this,Counselliing_form.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+
     }
 
-    //Choice Filling Counselling
-    public void submit_choice_filling(View view) {
 
-            Intent browser_intent=new Intent(Intent.ACTION_VIEW, Uri.parse("https://docs.google.com/forms/d/e/1FAIpQLScey-VvAmTi2ydNtAtuwB3VI9joJW9s_kISubSN8HOA4X1V9w/viewform"));
-            startActivity(browser_intent);
-        }
-
-    public void seat_acceptance(View view) {
-        Intent browser_intent=new Intent(Intent.ACTION_VIEW, Uri.parse("https://docs.google.com/forms/d/e/1FAIpQLScey-VvAmTi2ydNtAtuwB3VI9joJW9s_kISubSN8HOA4X1V9w/viewform"));
-        startActivity(browser_intent);
-    }
-
-    public void submit_upgradtaion(View view) {
-        Intent browser_intent=new Intent(Intent.ACTION_VIEW, Uri.parse("https://docs.google.com/forms/d/e/1FAIpQLScey-VvAmTi2ydNtAtuwB3VI9joJW9s_kISubSN8HOA4X1V9w/viewform"));
-        startActivity(browser_intent);
-    }
-
-    public void fee_payment(View view) { Intent browser_intent=new Intent(Intent.ACTION_VIEW, Uri.parse("https://docs.google.com/forms/d/e/1FAIpQLScey-VvAmTi2ydNtAtuwB3VI9joJW9s_kISubSN8HOA4X1V9w/viewform"));
-        startActivity(browser_intent);
-    }
 }

@@ -12,6 +12,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -29,8 +30,10 @@ public class NRI_Admission<adapter> extends AppCompatActivity  {
 
 
     private EditText FullName,EmailId,Marks,Address;
-    private  RadioButton Gender;
-    private Button Submit_nri_form,show_button;
+
+
+
+    private Button Submit_nri_form;
     private Spinner Course;
     private FirebaseDatabase db=FirebaseDatabase.getInstance();
     private DatabaseReference root=db.getReference().child("NRI Candidates");
@@ -49,7 +52,7 @@ public class NRI_Admission<adapter> extends AppCompatActivity  {
         //Gender=findViewById(R.id.radio_button);
         Address=findViewById(R.id.Adreess);
 
-        show_button=findViewById(R.id.show_nri_button2);
+      //  show_button=findViewById(R.id.show_nri_button2);
 
         Submit_nri_form=findViewById(R.id.submit_nri_button);
 
@@ -92,12 +95,7 @@ public class NRI_Admission<adapter> extends AppCompatActivity  {
                 });
 
 
-                show_button.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        startActivity(new Intent(NRI_Admission.this,show_nri_admission_data.class));
-                    }
-                });
+
 
             }
         });

@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Counselliing_form">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <ImageView
+
+            android:layout_width="404dp"
+            android:layout_height="310dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            android:src="@drawable/choice_filling" />
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:layout_marginTop="290dp"
+            android:orientation="vertical"
+            android:padding="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!--Spinner widget-->
+
+
+            <RadioGroup
+                android:id="@+id/state_of_eligibility1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.659"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.345">
+
+                <RadioButton
+                    android:id="@+id/Home_state_quota1"
+
+                    android:layout_width="131dp"
+
+                    android:layout_height="62dp"
+                    android:layout_marginStart="25dp"
+                    android:text="Home State" />
+
+                <RadioButton
+                    android:id="@+id/All_india_quota1"
+                    android:layout_width="137dp"
+                    android:layout_height="38dp"
+                    android:layout_marginStart="40dp"
+                    android:text="All India" />
+            </RadioGroup>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="12dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+
+                    android:id="@+id/edit_text_full_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:color="#144970"
+                    android:ems="10"
+                    android:hint="Full Name"
+                    android:maxLength="30" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="374dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/email_id"
+                    android:layout_width="361dp"
+                    android:layout_height="63dp"
+                    android:hint="Email Id"
+                    android:maxEms="10"
+                    android:textColor="#144970" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <RadioGroup
+                android:id="@+id/radio_button"
+                android:layout_width="359dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.659"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.345">
+
+                <RadioButton
+                    android:id="@+id/radio_button_male"
+
+                    android:layout_width="109dp"
+
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:text="Male" />
+
+                <RadioButton
+                    android:id="@+id/radio_button_female"
+                    android:layout_width="137dp"
+                    android:layout_height="38dp"
+                    android:layout_marginStart="40dp"
+                    android:text="Female" />
+            </RadioGroup>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="362dp"
+
+
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="346dp"
+                    android:layout_height="56dp"
+                    android:id="@+id/enter_your_marks"
+
+                    android:hint="Enter your Entrance Exam Marks"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:textColor="#000" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="363dp"
+                android:layout_height="76dp"
+                android:layout_marginTop="12dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/first_choice_branch"
+                    android:layout_width="350dp"
+                    android:layout_height="59dp"
+                    android:hint="First Choice of Branch"
+
+
+                    android:textColor="#000" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="362dp"
+                android:layout_height="76dp"
+                android:layout_marginTop="12dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/second_choice_branch"
+                    android:layout_width="350dp"
+                    android:layout_height="63dp"
+                    android:hint="Second Choice of Branch"
+
+                    android:textColor="#000" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="361dp"
+                android:layout_height="75dp"
+                android:layout_marginTop="12dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/Third_choice_of_branch"
+                    android:layout_width="350dp"
+                    android:layout_height="64dp"
+                    android:hint="Third Choice of Branch"
+
+                    android:textColor="#000" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="361dp"
+                android:layout_height="76dp"
+                android:layout_marginTop="12dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/fourth_choice_branch"
+                    android:layout_width="350dp"
+                    android:layout_height="61dp"
+                    android:hint="Fourth Choice of Branch"
+
+                    android:textColor="#000" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="362dp"
+                android:layout_height="78dp"
+                android:layout_marginTop="12dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/fifth_choice_branch"
+                    android:layout_width="350dp"
+                    android:layout_height="70dp"
+                    android:hint="Fifth Choice of Branch"
+
+                    android:textColor="#000" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="342dp"
+                android:layout_height="92dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="-2dp"
+
+                android:layout_marginEnd="5dp"
+                android:hint=" Date of Birth"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/imageView"
+                app:layout_constraintVertical_bias="0.347">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/datatime"
+                    android:layout_width="339dp"
+                    android:layout_height="80dp"
+                    android:drawableRight="@drawable/ic_baseline_calendar_today_24"
+
+                    tools:layout_editor_absoluteX="31dp"
+                    tools:layout_editor_absoluteY="301dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.constraintlayout.utils.widget.MotionButton
+                android:id="@+id/submit_choice_filling"
+                android:layout_width="369dp"
+                android:layout_height="46dp"
+                android:layout_marginTop="90dp"
+                android:layout_marginBottom="10dp"
+                android:background="#144970"
+                android:text="Submit"
+                android:textColor="@color/white"
+                android:textSize="22sp" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

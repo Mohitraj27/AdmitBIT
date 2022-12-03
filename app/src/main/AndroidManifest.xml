@@ -17,8 +17,10 @@
         android:theme="@style/Theme.SE_firebase"
         tools:targetApi="31">
         <activity
-            android:name=".show_nri_admission_data"
-            android:exported="false">
+            android:name=".Counselliing_form"
+            android:exported="false"
+            android:parentActivityName=".Counselling"
+            android:label="Choice Filling">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
