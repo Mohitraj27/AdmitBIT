@@ -75,7 +75,7 @@
         android:layout_width="355dp"
         android:layout_height="56dp"
         android:layout_marginTop="24dp"
-        android:text="Agent Login/SignUp" />
+        android:text="Admin Login/SignUp" />
     </LinearLayout>
 
 

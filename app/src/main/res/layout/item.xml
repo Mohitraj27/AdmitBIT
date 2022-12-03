@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    app:cardElevation="8dp"
+    android:padding="10dp"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="10dp">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="72dp"
+            android:layout_height="match_parent"
+            android:text="Email : "
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/email_text"
+            android:layout_width="292dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="20dp"
+            android:text="dummy@gmail.com"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="72dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:text="Name : "
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/full_name_text"
+            android:layout_width="292dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:text="dummy"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:text="Marks Scored: "
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/marks_text"
+            android:layout_width="105dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="20dp"
+            android:text="90"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="127dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="0dp"
+            android:text="Residential Address: "
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/address_text"
+            android:layout_width="233dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:text="New York City"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>
+</androidx.cardview.widget.CardView>
