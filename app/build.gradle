@@ -30,6 +30,10 @@ android {
 
 dependencies {
 
+
+    //Payment Integration
+    implementation 'com.razorpay:checkout:1.6.4'
+
     implementation "androidx.recyclerview:recyclerview:1.2.1"
 
     implementation 'androidx.appcompat:appcompat:1.5.1'

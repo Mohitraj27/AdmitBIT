@@ -84,6 +84,15 @@ public class Counselling extends AppCompatActivity {
         });
 
 
+        fee_payment=findViewById(R.id.fee_payment);
+        fee_payment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(Counselling.this,Fee_payment.class);
+                startActivity(intent);
+            }
+        });
+
 
 
     }
