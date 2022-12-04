@@ -2,6 +2,7 @@ package com.example.se_firebase;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.cardview.widget.CardView;
 
 import android.content.DialogInterface;
@@ -42,6 +43,8 @@ public class MainActivity<v_flippper, images> extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
 
         //Activity Intent
         Notification_intent=findViewById(R.id.notification_alert);
