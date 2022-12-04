@@ -136,7 +136,7 @@ public class Fee_payment extends AppCompatActivity implements PaymentResultListe
                     object.put("Paying for Semester",Sem_fee);
 
                     // put mobile number
-                    object.put("Contact No", Contact_details);
+                    object.put("Enrollment Number", Contact_details);
 
                     // put email
                     object.put("prefill.email", "chaitanyamunje@gmail.com");

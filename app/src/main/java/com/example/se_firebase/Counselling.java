@@ -104,6 +104,15 @@ public class Counselling extends AppCompatActivity {
         });
 
 
+        Seat_acceptance=findViewById(R.id.seat_acceptance);
+        Seat_acceptance.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(Counselling.this, com.example.se_firebase.Seat_acceptance.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
 
