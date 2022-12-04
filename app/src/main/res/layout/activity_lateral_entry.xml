@@ -159,7 +159,7 @@
                     android:inputType="number"
                     android:maxLength="2"
                     android:textColor="#000" />
-//Category
+
                 <TextView
 
                     android:layout_width="290dp"

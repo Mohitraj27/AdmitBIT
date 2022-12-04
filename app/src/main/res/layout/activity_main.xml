@@ -211,6 +211,7 @@
                 android:textColor="#144970"
                 android:textSize="17sp"
                 android:textStyle="bold" />
+
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -337,6 +338,7 @@
                 android:textColor="#144970"
                 android:textSize="17sp"
                 android:textStyle="bold" />
+
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
             android:id="@+id/contact_us"
@@ -419,6 +421,7 @@
                 android:textColor="#144970"
                 android:textSize="17sp"
                 android:textStyle="bold" />
+
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -463,6 +466,7 @@
                 android:textSize="17sp"
                 android:textStyle="bold" />
         </androidx.cardview.widget.CardView>
+
     </RelativeLayout>
 
 </ScrollView>

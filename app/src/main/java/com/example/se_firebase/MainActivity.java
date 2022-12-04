@@ -33,6 +33,8 @@ public class MainActivity<v_flippper, images> extends AppCompatActivity {
     FirebaseAuth mAuth;
 
 
+    Button chatbot;
+
     // //For automatic image flipping/movement this widget is used
         ViewFlipper v_flippper;
     @Override
@@ -124,6 +126,16 @@ public class MainActivity<v_flippper, images> extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
+//        chatbot=findViewById(R.id.chat_bot);
+//        chatbot.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent=new Intent(MainActivity.this,Chatbot_main.class);
+//                startActivity(intent);
+//            }
+//        });
 
         contact_us=findViewById(R.id.contact_us);
         contact_us.setOnClickListener(new View.OnClickListener() {

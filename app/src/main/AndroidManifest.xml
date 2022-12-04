@@ -16,6 +16,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SE_firebase"
         tools:targetApi="31">
+        <activity
+            android:name=".Chatbot_main"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
         <receiver
             android:name="com.razorpay.RzpTokenReceiver"
             android:exported="false">
@@ -23,6 +31,7 @@
                 <action android:name="rzp.device_token.share" />
             </intent-filter>
         </receiver>
+
         <activity
             android:name="com.razorpay.CheckoutActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
@@ -30,12 +39,12 @@
             android:theme="@style/CheckoutTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <data
                     android:host="rzp.io"
                     android:scheme="io.rzp" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".Fee_payment"
             android:exported="false"
@@ -46,14 +55,12 @@
         </activity>
         <activity
             android:name=".Seat_upgradation"
-            android:exported="false">
-
-        </activity>
+            android:exported="false"
+            android:label="Seat Upgradation"></activity>
         <activity
             android:name=".Seat_acceptance"
-            android:exported="false">
-
-        </activity>
+            android:exported="false"
+            android:label="Seat Acceptance"></activity>
         <activity
             android:name=".Counselliing_form"
             android:exported="false"

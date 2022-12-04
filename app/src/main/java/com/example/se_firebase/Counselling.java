@@ -94,6 +94,15 @@ public class Counselling extends AppCompatActivity {
         });
 
 
+        seat_upgrdation=findViewById(R.id.submit_upgradtaion);
+        seat_upgrdation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(Counselling.this,Seat_upgradation.class);
+                startActivity(intent);
+            }
+        });
+
 
     }
 
