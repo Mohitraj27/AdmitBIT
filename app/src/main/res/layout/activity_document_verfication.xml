@@ -45,7 +45,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginTop="120dp"
-            android:onClick="jee_marksheet"
+            android:onClick="jee_score"
             android:text="Submit " />
     </androidx.cardview.widget.CardView>
 
@@ -87,7 +87,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginTop="120dp"
-            android:onClick="tenth_marksheet"
+            android:onClick="ten_marksheet"
             android:text="Submit " />
     </androidx.cardview.widget.CardView>
 
@@ -129,7 +129,7 @@
             android:layout_height="50dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="120dp"
-            android:onClick="twelve_marksheet"
+            android:onClick="tweleve_marksheet"
             android:text="Submit " />
     </androidx.cardview.widget.CardView>
 
@@ -213,7 +213,7 @@
             android:layout_height="50dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="100dp"
-            android:onClick="Birth_certificate"
+            android:onClick="Birth_certficate"
             android:text="Submit " />
     </androidx.cardview.widget.CardView>
 
@@ -255,7 +255,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginTop="120dp"
-            android:onClick="jee_marksheet"
+            android:onClick="SeatAcceptance"
             android:text="Submit " />
     </androidx.cardview.widget.CardView>
 </RelativeLayout>

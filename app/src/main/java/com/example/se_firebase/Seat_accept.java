@@ -1,5 +1,8 @@
 package com.example.se_firebase;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -12,9 +15,6 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.storage.FirebaseStorage;
@@ -24,9 +24,7 @@ import com.google.firebase.storage.UploadTask;
 
 import java.io.IOException;
 
-
-//This activity is for Adhar card Documents
-public class Upload_files extends AppCompatActivity implements View.OnClickListener /*  implementing click listener */ {
+public class Seat_accept extends AppCompatActivity implements View.OnClickListener{
     //a constant to track the file chooser intent
     private static final int PICK_IMAGE_REQUEST = 234;
 
@@ -41,13 +39,15 @@ public class Upload_files extends AppCompatActivity implements View.OnClickListe
     private Uri filePath;
     private StorageReference storageReference;
 
-
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_upload_files);
+        setContentView(R.layout.activity_seat_accept);
 
-storageReference= FirebaseStorage.getInstance().getReference();
+
+
+        storageReference= FirebaseStorage.getInstance().getReference();
 
         //getting views from layout
         buttonChoose = (Button) findViewById(R.id.browse);
@@ -59,6 +59,7 @@ storageReference= FirebaseStorage.getInstance().getReference();
         buttonChoose.setOnClickListener(this);
         buttonUpload.setOnClickListener(this);
     }
+
 
     //method to show file chooser
     private void showFileChooser() {
@@ -75,10 +76,10 @@ storageReference= FirebaseStorage.getInstance().getReference();
         }
         //if the clicked button is upload
         else if (view == buttonUpload) {
-          uploadFile();
+            uploadFile();
         }
     }
-private void uploadFile(){
+    private void uploadFile(){
         if(filePath !=null)
         {
             ProgressDialog progressDialog=new ProgressDialog(this);
@@ -86,32 +87,32 @@ private void uploadFile(){
             progressDialog.show();
 
 
-        StorageReference riverRef=storageReference.child("Aadhar Card Documents/files.jpeg");
+            StorageReference riverRef=storageReference.child("Seat Acceptance/seat_acceptance_files.jpeg");
 
 
-        riverRef.putFile(filePath)
-                .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-                    @Override
-                    public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                  progressDialog.dismiss();
-                  Toast.makeText(getApplicationContext(),"File Uploaded",Toast.LENGTH_LONG).show();
-                    }
-                })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception exception) {
-                        progressDialog.dismiss();
-                    Toast.makeText(getApplicationContext(),exception.getMessage(),Toast.LENGTH_LONG).show();
-                    }
-                })
-                .addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
-                    @Override
-                    public void onProgress(@NonNull UploadTask.TaskSnapshot taskSnapshot) {
-                      double progress=(100.0 * taskSnapshot.getBytesTransferred())/taskSnapshot.getTotalByteCount();
-                    progressDialog.setMessage(((int) progress)+ "% Uploaded...");
-                    }
-                });
-}else{
+            riverRef.putFile(filePath)
+                    .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                        @Override
+                        public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                            progressDialog.dismiss();
+                            Toast.makeText(getApplicationContext(),"File Uploaded",Toast.LENGTH_LONG).show();
+                        }
+                    })
+                    .addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception exception) {
+                            progressDialog.dismiss();
+                            Toast.makeText(getApplicationContext(),exception.getMessage(),Toast.LENGTH_LONG).show();
+                        }
+                    })
+                    .addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
+                        @Override
+                        public void onProgress(@NonNull UploadTask.TaskSnapshot taskSnapshot) {
+                            double progress=(100.0 * taskSnapshot.getBytesTransferred())/taskSnapshot.getTotalByteCount();
+                            progressDialog.setMessage(((int) progress)+ "% Uploaded...");
+                        }
+                    });
+        }else{
             //display a error toast
         }
     }

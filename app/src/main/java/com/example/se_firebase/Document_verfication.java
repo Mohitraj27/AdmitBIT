@@ -42,25 +42,31 @@ public class Document_verfication extends AppCompatActivity {
         startActivity(browser_intent);
     }
 
-    public void Birth_certificate(View view) {
-        Intent browser_intent=new Intent(Document_verfication.this,Upload_files.class);
+
+    public void Birth_certficate(View view) {
+        Intent browser_intent=new Intent(Document_verfication.this,Birth_certificate.class);
+        startActivity(browser_intent);
+    }
+
+    public void tweleve_marksheet(View view) {
+        Intent browser_intent=new Intent(Document_verfication.this,tweleve_document.class);
         startActivity(browser_intent);
 
     }
 
-    public void twelve_marksheet(View view) {
-        Intent browser_intent=new Intent(Document_verfication.this,Upload_files.class);
-        startActivity(browser_intent);
 
-    }
-
-    public void jee_marksheet(View view) {
-        Intent browser_intent=new Intent(Document_verfication.this,Upload_files.class);
+    public void jee_score(View view) {
+        Intent browser_intent=new Intent(Document_verfication.this,JEE_Score_card.class);
         startActivity(browser_intent);
     }
 
-    public void tenth_marksheet(View view) {
-        Intent browser_intent=new Intent(Document_verfication.this,Upload_files.class);
+    public void ten_marksheet(View view) {
+        Intent browser_intent=new Intent(Document_verfication.this,Tenth_marksheet.class);
+        startActivity(browser_intent);
+    }
+
+    public void SeatAcceptance(View view) {
+        Intent browser_intent=new Intent(Document_verfication.this,Seat_accept.class);
         startActivity(browser_intent);
     }
 }

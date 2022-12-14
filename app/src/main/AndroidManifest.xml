@@ -17,6 +17,46 @@
         android:theme="@style/Theme.SE_firebase"
         tools:targetApi="31">
         <activity
+            android:name=".Seat_accept"
+            android:exported="false"
+            android:label="Upload your Document">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:label="Upload your Document"
+            android:name=".Tenth_marksheet"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:label="Upload your Document"
+            android:name=".JEE_Score_card"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:label="Upload your Document"
+            android:name=".tweleve_document"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:label="Upload your Document"
+            android:name=".Birth_certificate"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".Upload_files"
             android:exported="false">
             <meta-data
