@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
 
     tools:context=".Document_verfication">
+
     <androidx.cardview.widget.CardView
         android:layout_width="184dp"
         android:layout_height="wrap_content"
@@ -13,11 +14,11 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="214dp"
-        android:layout_marginTop="228dp"
-        android:layout_marginEnd="13dp"
+        android:layout_marginStart="211dp"
+        android:layout_marginTop="275dp"
+        android:layout_marginEnd="16dp"
 
-        android:layout_marginBottom="324dp"
+        android:layout_marginBottom="277dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.134"
@@ -56,10 +57,10 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="438dp"
-        android:layout_marginEnd="214dp"
-        android:layout_marginBottom="114dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="543dp"
+        android:layout_marginEnd="208dp"
+        android:layout_marginBottom="9dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.134"
@@ -98,10 +99,10 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="221dp"
-        android:layout_marginEnd="212dp"
-        android:layout_marginBottom="329dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="275dp"
+        android:layout_marginEnd="210dp"
+        android:layout_marginBottom="275dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.134"
@@ -135,7 +136,7 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
-        android:layout_height="181dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
@@ -179,13 +180,13 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="198dp"
-        android:layout_height="171dp"
+        android:layout_height="185dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="5dp"
-        android:layout_marginBottom="536dp"
+        android:layout_marginBottom="522dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.134"
@@ -210,9 +211,9 @@
 
         <Button
             android:layout_width="150dp"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="120dp"
             android:onClick="Birth_certficate"
             android:text="Submit " />
     </androidx.cardview.widget.CardView>
@@ -224,10 +225,10 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="228dp"
-        android:layout_marginTop="433dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="119dp"
+        android:layout_marginStart="221dp"
+        android:layout_marginTop="542dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.134"

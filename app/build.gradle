@@ -30,7 +30,10 @@ android {
 }
 
 dependencies {
+//country code picker for otp login
+   // implementation 'com.hbb20:ccp:2.4.0'
 
+    implementation 'com.hbb20:ccp:2.6.1'
 
     //for storage of files to firebase
     implementation 'com.karumi:dexter:6.0.2'

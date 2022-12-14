@@ -57,7 +57,7 @@
         android:layout_width="168dp"
         android:layout_height="48dp"
 
-        android:layout_marginTop="84dp"
+        android:layout_marginTop="54dp"
         android:text="Login" />
 
     <com.google.android.material.button.MaterialButton
@@ -70,12 +70,49 @@
 
             />
 
-    <com.google.android.material.button.MaterialButton
+
+    <ImageView
         android:id="@+id/Admin_btnLogin"
-        android:layout_width="355dp"
-        android:layout_height="56dp"
-        android:layout_marginTop="24dp"
-        android:text="Admin Login/SignUp" />
-    </LinearLayout>
+        android:layout_width="112dp"
+        android:layout_height="79dp"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="4dp"
+        android:src="@drawable/ic_baseline_admin_panel_settings_24"
+        android:textColor="@color/purple_700"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:layout_width="85dp"
+        android:layout_height="77dp"
+        android:layout_marginTop="-90dp"
+        android:id="@+id/login_otp"
+        android:src="@drawable/ic_baseline_phonelink_lock_24"></ImageView>
+
+    <TextView
+        android:layout_width="126dp"
+        android:layout_height="32dp"
+        android:text="Login Using OTP"
+        android:textColor="@color/purple_700"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="106dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="-30dp"
+        android:text="Admin Login"
+        android:textColor="@color/purple_700"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="110dp"
+        android:layout_height="87dp"
+        android:layout_marginStart="250dp"
+        android:layout_marginTop="-90dp"
+        app:srcCompat="@drawable/common_google_signin_btn_icon_dark" />
+</LinearLayout>
 
 

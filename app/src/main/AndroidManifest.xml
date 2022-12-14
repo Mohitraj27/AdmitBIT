@@ -17,6 +17,20 @@
         android:theme="@style/Theme.SE_firebase"
         tools:targetApi="31">
         <activity
+            android:name=".manageOtp"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".OTP_login"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".Seat_accept"
             android:exported="false"
             android:label="Upload your Document">
@@ -25,33 +39,33 @@
                 android:value="" />
         </activity>
         <activity
-            android:label="Upload your Document"
             android:name=".Tenth_marksheet"
-            android:exported="false">
+            android:exported="false"
+            android:label="Upload your Document">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:label="Upload your Document"
             android:name=".JEE_Score_card"
-            android:exported="false">
+            android:exported="false"
+            android:label="Upload your Document">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:label="Upload your Document"
             android:name=".tweleve_document"
-            android:exported="false">
+            android:exported="false"
+            android:label="Upload your Document">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:label="Upload your Document"
             android:name=".Birth_certificate"
-            android:exported="false">
+            android:exported="false"
+            android:label="Upload your Document">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />

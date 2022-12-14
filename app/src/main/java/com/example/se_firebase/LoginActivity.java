@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -30,15 +31,17 @@ public class LoginActivity extends AppCompatActivity {
     Button tvRegisterHere;
     Button btnLogin;
 
+    ImageView login_otp;
 
     //Admin Login / SignUp
-    Button Admin_login_signUp_intent;
+    ImageView Admin_login_signUp_intent;
 
 
 
     // //For automatic image flipping/movement this widget is used
     ViewFlipper v_flippper;
     FirebaseAuth mAuth;
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,6 +65,20 @@ public class LoginActivity extends AppCompatActivity {
         {
             flipperImages(image);
         }
+
+
+        //Otp login
+        login_otp=findViewById(R.id.login_otp);
+        login_otp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(LoginActivity.this,OTP_login.class);
+                startActivity(intent);
+            }
+        });
+
+
+
 
 //Admin intent
         Admin_login_signUp_intent=findViewById(R.id.Admin_btnLogin);
