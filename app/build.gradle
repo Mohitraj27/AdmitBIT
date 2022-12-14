@@ -32,6 +32,9 @@ android {
 dependencies {
 
 
+    //for storage of files to firebase
+    implementation 'com.karumi:dexter:6.0.2'
+
     //Payment Integration
     implementation 'com.razorpay:checkout:1.6.4'
 

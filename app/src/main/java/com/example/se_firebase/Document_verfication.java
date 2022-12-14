@@ -38,29 +38,29 @@ public class Document_verfication extends AppCompatActivity {
 
 
     public void adhaar_card(View view) {
-        Intent browser_intent=new Intent(Intent.ACTION_VIEW, Uri.parse("https://forms.gle/k3vSy7hTQb1uZPLJ6"));
+        Intent browser_intent=new Intent(Document_verfication.this,Upload_files.class);
         startActivity(browser_intent);
     }
 
     public void Birth_certificate(View view) {
-        Intent browser_intent=new Intent(Intent.ACTION_VIEW, Uri.parse("https://forms.gle/k3vSy7hTQb1uZPLJ6"));
+        Intent browser_intent=new Intent(Document_verfication.this,Upload_files.class);
         startActivity(browser_intent);
 
     }
 
     public void twelve_marksheet(View view) {
-        Intent browser_intent=new Intent(Intent.ACTION_VIEW, Uri.parse("https://forms.gle/k3vSy7hTQb1uZPLJ6"));
+        Intent browser_intent=new Intent(Document_verfication.this,Upload_files.class);
         startActivity(browser_intent);
 
     }
 
     public void jee_marksheet(View view) {
-        Intent browser_intent=new Intent(Intent.ACTION_VIEW, Uri.parse("https://forms.gle/k3vSy7hTQb1uZPLJ6"));
+        Intent browser_intent=new Intent(Document_verfication.this,Upload_files.class);
         startActivity(browser_intent);
     }
 
     public void tenth_marksheet(View view) {
-        Intent browser_intent=new Intent(Intent.ACTION_VIEW, Uri.parse("https://forms.gle/k3vSy7hTQb1uZPLJ6"));
+        Intent browser_intent=new Intent(Document_verfication.this,Upload_files.class);
         startActivity(browser_intent);
     }
 }

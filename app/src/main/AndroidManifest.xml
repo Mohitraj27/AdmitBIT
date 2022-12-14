@@ -16,7 +16,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SE_firebase"
         tools:targetApi="31">
-
+        <activity
+            android:name=".Upload_files"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
 
         <receiver
             android:name="com.razorpay.RzpTokenReceiver"
@@ -50,11 +56,11 @@
         <activity
             android:name=".Seat_upgradation"
             android:exported="false"
-            android:label="Seat Upgradation"></activity>
+            android:label="Seat Upgradation" />
         <activity
             android:name=".Seat_acceptance"
             android:exported="false"
-            android:label="Seat Acceptance"></activity>
+            android:label="Seat Acceptance" />
         <activity
             android:name=".Counselliing_form"
             android:exported="false"
