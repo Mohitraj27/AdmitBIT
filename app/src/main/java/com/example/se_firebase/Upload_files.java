@@ -1,139 +1,132 @@
 package com.example.se_firebase;
 
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.example.se_firebase.R;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
-import com.karumi.dexter.Dexter;
-import com.karumi.dexter.PermissionToken;
-import com.karumi.dexter.listener.PermissionDeniedResponse;
-import com.karumi.dexter.listener.PermissionGrantedResponse;
-import com.karumi.dexter.listener.PermissionRequest;
-import com.karumi.dexter.listener.single.PermissionListener;
 
-import java.io.InputStream;
+import java.io.IOException;
 
-public class Upload_files extends AppCompatActivity
-{
-    ImageView img;
-    Button browse, upload;
-    Uri filepath;
-    Bitmap bitmap;
+public class Upload_files extends AppCompatActivity implements View.OnClickListener /*  implementing click listener */ {
+    //a constant to track the file chooser intent
+    private static final int PICK_IMAGE_REQUEST = 234;
+
+    //Buttons
+    private Button buttonChoose;
+    private Button buttonUpload;
+
+    //ImageView
+    private ImageView imageView;
+
+    //a Uri object to store file path
+    private Uri filePath;
+    private StorageReference storageReference;
 
 
-    @SuppressLint("MissingInflatedId")
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_upload_files);
 
-        img=(ImageView)findViewById(R.id.imageView);
-        upload=(Button)findViewById(R.id.upload);
-        browse=(Button)findViewById(R.id.browse);
+storageReference= FirebaseStorage.getInstance().getReference();
 
-        browse.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view)
-            {
-                Dexter.withActivity(Upload_files.this)
-                        .withPermission(Manifest.permission.READ_EXTERNAL_STORAGE)
-                        .withListener(new PermissionListener() {
-                            @Override
-                            public void onPermissionGranted(PermissionGrantedResponse response)
-                            {
-                                Intent intent=new Intent(Intent.ACTION_PICK);
-                                intent.setType("image/*");
-                                startActivityForResult(Intent.createChooser(intent,"Please select Image"),1);
-                            }
+        //getting views from layout
+        buttonChoose = (Button) findViewById(R.id.browse);
+        buttonUpload = (Button) findViewById(R.id.upload);
 
-                            @Override
-                            public void onPermissionDenied(PermissionDeniedResponse response) {
+        imageView = (ImageView) findViewById(R.id.imageView);
 
-                            }
-
-                            @Override
-                            public void onPermissionRationaleShouldBeShown(PermissionRequest permission, PermissionToken token) {
-                                token.continuePermissionRequest();
-                            }
-                        }).check();
-
-            }
-        });
-
-        upload.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                uploadtofirebase();
-
-            }
-        });
-
+        //attaching listener
+        buttonChoose.setOnClickListener(this);
+        buttonUpload.setOnClickListener(this);
     }
 
+    //method to show file chooser
+    private void showFileChooser() {
+        Intent intent = new Intent();
+        intent.setType("image/*");
+        intent.setAction(Intent.ACTION_GET_CONTENT);
+        startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_IMAGE_REQUEST);
+    }
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data)
-    {
-        if(requestCode==1 && resultCode==RESULT_OK)
-        {
-            filepath=data.getData();
-            try
-            {
-                InputStream inputStream=getContentResolver().openInputStream(filepath);
-                bitmap= BitmapFactory.decodeStream(inputStream);
-                img.setImageBitmap(bitmap);
-            }catch (Exception ex)
-            {
-
-            }
+    public void onClick(View view) {
+        //if the clicked button is choose
+        if (view == buttonChoose) {
+            showFileChooser();
         }
-        super.onActivityResult(requestCode, resultCode, data);
+        //if the clicked button is upload
+        else if (view == buttonUpload) {
+          uploadFile();
+        }
     }
+private void uploadFile(){
+        if(filePath !=null)
+        {
+            ProgressDialog progressDialog=new ProgressDialog(this);
+            progressDialog.setTitle("Uploading...");
+            progressDialog.show();
 
-    private void uploadtofirebase()
-    {
-        final ProgressDialog dialog=new ProgressDialog(this);
-        dialog.setTitle("File Uploader");
-        dialog.show();
 
+        StorageReference riverRef=storageReference.child("documents/images.jpg");
 
-        FirebaseStorage storage=FirebaseStorage.getInstance();
-        StorageReference uploader=storage.getReference().child("image1");
-        uploader.putFile(filepath)
-                .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>()
-                {
+        riverRef.putFile(filePath)
+                .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                     @Override
-                    public void onSuccess(UploadTask.TaskSnapshot taskSnapshot)
-                    {
-                        dialog.dismiss();
-                        Toast.makeText(getApplicationContext(),"File Uploaded",Toast.LENGTH_LONG).show();
+                    public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                  progressDialog.dismiss();
+                  Toast.makeText(getApplicationContext(),"File Uploaded",Toast.LENGTH_LONG).show();
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception exception) {
+                        progressDialog.dismiss();
+                    Toast.makeText(getApplicationContext(),exception.getMessage(),Toast.LENGTH_LONG).show();
                     }
                 })
                 .addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
                     @Override
-                    public void onProgress(UploadTask.TaskSnapshot taskSnapshot)
-                    {
-                        float percent=(100*taskSnapshot.getBytesTransferred())/taskSnapshot.getTotalByteCount();
-                        dialog.setMessage("Uploaded :"+(int)percent+" %");
+                    public void onProgress(@NonNull UploadTask.TaskSnapshot taskSnapshot) {
+                      double progress=(100.0 * taskSnapshot.getBytesTransferred())/taskSnapshot.getTotalByteCount();
+                    progressDialog.setMessage(((int) progress)+ "% Uploaded...");
                     }
                 });
+}else{
+            //display a error toast
+        }
+    }
+
+
+    //handling the image chooser activity result
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK && data != null && data.getData() != null) {
+            filePath = data.getData();
+            try {
+                Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), filePath);
+                imageView.setImageBitmap(bitmap);
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
     }
 }
