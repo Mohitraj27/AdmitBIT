@@ -40,9 +40,9 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="19dp"
+            android:layout_marginStart="15dp"
             android:layout_marginTop="320dp"
-            android:layout_marginEnd="25dp"
+            android:layout_marginEnd="15dp"
             android:layout_marginBottom="356dp"
             android:color="#144970"
             android:ems="10"
@@ -60,7 +60,7 @@
             android:layout_alignParentBottom="true"
             android:layout_marginStart="15dp"
             android:layout_marginTop="666dp"
-            android:layout_marginEnd="25dp"
+            android:layout_marginEnd="15dp"
             android:layout_marginBottom="19dp"
             android:background="#144970"
             android:text="Save As Draft"
@@ -69,23 +69,23 @@
 
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
 
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="15dp"
             android:layout_marginTop="231dp"
-            android:layout_marginEnd="19dp"
+            android:layout_marginEnd="15dp"
             android:layout_marginBottom="431dp">
 
             <com.google.android.material.textfield.TextInputEditText
 
                 android:id="@+id/edit_text_full_name"
-                android:layout_width="369dp"
-                android:layout_height="56dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:color="#144970"
                 android:ems="10"
 
@@ -95,23 +95,23 @@
 
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
 
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="15dp"
             android:layout_marginTop="402dp"
-            android:layout_marginEnd="22dp"
+            android:layout_marginEnd="15dp"
             android:layout_marginBottom="259dp">
 
             <com.google.android.material.textfield.TextInputEditText
 
                 android:id="@+id/edit_text_semester_payment"
                 android:layout_width="match_parent"
-                android:layout_height="56dp"
+                android:layout_height="wrap_content"
                 android:color="#144970"
                 android:ems="10"
                 android:hint=" Enter your Current Semester"
@@ -121,20 +121,23 @@
 
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="385dp"
-            android:layout_height="82dp"
+            android:layout_width="387dp"
+            android:layout_height="72dp"
 
+            android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="15dp"
             android:layout_marginTop="502dp"
-            android:layout_marginBottom="147dp">
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="157dp">
 
             <com.google.android.material.textfield.TextInputEditText
 
                 android:id="@+id/edit_payment_amount"
-                android:layout_width="378dp"
-                android:layout_height="54dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:color="#144970"
                 android:ems="10"
                 android:hint=" Enter your Fee Amount"
@@ -150,9 +153,9 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="19dp"
+            android:layout_marginStart="15dp"
             android:layout_marginTop="603dp"
-            android:layout_marginEnd="21dp"
+            android:layout_marginEnd="15dp"
             android:layout_marginBottom="82dp"
             android:background="#144970"
             android:text="Pay Now"

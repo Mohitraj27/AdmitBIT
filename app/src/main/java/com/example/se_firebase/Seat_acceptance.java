@@ -1,8 +1,6 @@
 package com.example.se_firebase;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -11,6 +9,10 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -25,7 +27,7 @@ public class Seat_acceptance extends AppCompatActivity {
     private Object v;
     private EditText FullName,EnrollmentNo;
 
-    private Button Confirm_submit,Procced_to_pay;
+    private Button Confirm_submit;//Procced_to_pay;
 
 
     private FirebaseDatabase db=FirebaseDatabase.getInstance();
@@ -44,14 +46,14 @@ public class Seat_acceptance extends AppCompatActivity {
         setContentView(R.layout.activity_seat_acceptance);
 
 
-        Procced_to_pay=findViewById(R.id.fee_payment_now);
-        Procced_to_pay.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent=new Intent(Seat_acceptance.this,Fee_payment.class);
-                startActivity(intent);
-            }
-        });
+//        Procced_to_pay=findViewById(R.id.fee_payment_now);
+//        Procced_to_pay.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent=new Intent(Seat_acceptance.this,Fee_payment.class);
+//                startActivity(intent);
+//            }
+//        });
 
 
 
@@ -85,9 +87,9 @@ public class Seat_acceptance extends AppCompatActivity {
 
 
                 HashMap<String, String> userMap=new HashMap<>();
-                userMap.put("Full Name of Candidate ", name);
-                userMap.put("Enrollment Number of the Candidate", enroll);
-                userMap.put("Seat Acceptance for ",seat_upgrade);
+                userMap.put("name ", name);
+                userMap.put("Enrollment_no", enroll);
+                userMap.put("Seat_Accepted ",seat_upgrade);
 
 
 
@@ -95,7 +97,26 @@ public class Seat_acceptance extends AppCompatActivity {
                         .addOnCompleteListener(new OnCompleteListener<Void>() {
                             @Override
                             public void onComplete(@NonNull Task<Void> task) {
-                                Toast.makeText(Seat_acceptance.this,"We've received your response.Thank you for choosing BIT Mesra, Best of Luck!! ",Toast.LENGTH_SHORT).show();
+                                //Toast.makeText(Seat_acceptance.this,"We've received your response.Thank you for choosing BIT Mesra, Best of Luck!! ",Toast.LENGTH_SHORT).show();
+                                // setup the alert builder
+                                AlertDialog.Builder builder = new AlertDialog.Builder(Seat_acceptance.this);
+                                builder.setTitle("Submission Successfull");
+                                builder.setMessage("We've received your response.Thank you for choosing BIT Mesra, Best of Luck!!.");
+                                // add a button
+                                builder.setPositiveButton("Pay Application Fee",
+                                        new DialogInterface.OnClickListener() {
+                                            @Override
+                                            public void onClick(DialogInterface dialogInterface, int i) {
+                                                Intent intent=new Intent(Seat_acceptance.this,Fee_payment.class);
+                                                startActivity(intent);
+                                            }
+                                        });
+                                // create and show the alert dialog
+                                AlertDialog dialog = builder.create();
+                                dialog.show();
+
+
+
                             }
                         })
                         .addOnFailureListener(new OnFailureListener() {

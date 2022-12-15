@@ -6,18 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".Seat_acceptance">
 
-    <Button
-        android:id="@+id/fee_payment_now"
-        android:layout_width="360dp"
-        android:layout_height="49dp"
-        android:text="Proceed to Payment"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.976" />
-
     <RadioGroup
         android:id="@+id/seat_upgrade"
         android:layout_width="333dp"
@@ -183,18 +171,19 @@
         app:layout_constraintHorizontal_bias="0.45"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.901" />
+        app:layout_constraintVertical_bias="0.976" />
 
     <CheckBox
         android:id="@+id/checkBox"
         android:layout_width="351dp"
         android:layout_height="51dp"
-        android:layout_marginBottom="136dp"
+        android:layout_marginBottom="100dp"
         android:text="I accept the seat alloted to me and want to lock it."
         android:textColor="#144970"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.433"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

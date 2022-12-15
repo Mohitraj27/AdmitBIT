@@ -1,13 +1,13 @@
 package com.example.se_firebase;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -66,7 +66,8 @@ public class Fee_payment extends AppCompatActivity implements PaymentResultListe
              userMap.put("Full Name of Student ", name);
              userMap.put("Current Semester ", Currentsem);
              userMap.put("Amount to be paid ", amountfee);
-             userMap.put("Comtact Number", contactno);
+             userMap.put("Contact Number", contactno);
+
 
 
              root.push().setValue(userMap)
@@ -139,7 +140,7 @@ public class Fee_payment extends AppCompatActivity implements PaymentResultListe
                     object.put("Enrollment Number", Contact_details);
 
                     // put email
-                    object.put("prefill.email", "chaitanyamunje@gmail.com");
+                    object.put("prefill.email", "");
 
                     // open razorpay to checkout activity
                     checkout.open(Fee_payment.this, object);

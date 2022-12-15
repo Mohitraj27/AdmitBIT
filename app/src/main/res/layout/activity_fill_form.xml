@@ -11,335 +11,292 @@
         >
 
 
-        <androidx.cardview.widget.CardView
+        <ImageView
 
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_height="198dp"
+            android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="1dp"
-            app:cardBackgroundColor="@color/white"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="10dp"
-            app:cardMaxElevation="12dp"
-            app:cardPreventCornerOverlap="true"
-            app:cardUseCompatPadding="true"
+            android:layout_gravity="center"
+            android:layout_marginStart="87dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="90dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_baseline_assignment_ind_24" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="1058dp"
+
+            android:layout_marginTop="200dp"
+            android:orientation="vertical"
+            android:padding="36dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="parent"
-            app:layout_constraintStart_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="parent">
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-            <ImageView
+            <!--Spinner widget-->
 
-                android:layout_width="141dp"
-                android:layout_height="127dp"
-                android:layout_gravity="center"
-                android:layout_marginStart="-55dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="40dp"
-                android:layout_marginBottom="10dp"
 
-                android:src="@drawable/ic_baseline_laptop_mac_24" />
 
-            <TextView
-                android:layout_width="wrap_content"
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="bottom|center_horizontal"
-                android:layout_marginStart="69dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="100dp"
-                android:text="Computer Science Engineering"
-                android:textColor="#144970"
-                android:textSize="15sp"
-                android:textStyle="bold" />
 
-            <com.google.android.material.button.MaterialButton
-                android:layout_width="142dp"
+                android:layout_marginTop="12dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+
+                    android:id="@+id/edit_text_full_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:color="#144970"
+                    android:ems="10"
+                    android:hint="Full Name"
+                    android:maxLength="30" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="190dp"
-                android:layout_marginTop="90dp"
-                android:onClick="Fill_form"
-                android:text="Fill Form"
-                android:textSize="12sp" />
-        </androidx.cardview.widget.CardView>
+                android:layout_marginTop="12dp">
 
-        <androidx.cardview.widget.CardView
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/email_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Email Id"
+                    android:maxEms="10"
+                    android:textColor="#144970" />
 
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="210dp"
-            android:layout_marginEnd="1dp"
-            app:cardBackgroundColor="@color/white"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="10dp"
-            app:cardMaxElevation="12dp"
-            app:cardPreventCornerOverlap="true"
-            app:cardUseCompatPadding="true"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="parent"
-            app:layout_constraintStart_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="parent">
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <ImageView
+            <RadioGroup
+                android:id="@+id/radio_button_gender"
+                android:layout_width="364dp"
+                android:layout_height="56dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.659"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.345">
 
-                android:layout_width="141dp"
-                android:layout_height="127dp"
-                android:layout_gravity="center"
-                android:layout_marginStart="-55dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="40dp"
-                android:layout_marginBottom="10dp"
+                <RadioButton
+                    android:id="@+id/radio_button_male"
 
-                android:src="@drawable/ic_baseline_engineering_24" />
+                    android:layout_width="91dp"
 
-            <TextView
-                android:layout_width="185dp"
-                android:layout_height="51dp"
-                android:layout_gravity="bottom|center_horizontal"
-                android:layout_marginStart="69dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="100dp"
-                android:text="Electronics Communication Engineering"
-                android:textColor="#144970"
-                android:textSize="15sp"
-                android:textStyle="bold" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:text="Male" />
 
-            <com.google.android.material.button.MaterialButton
-                android:layout_width="147dp"
+                <RadioButton
+                    android:id="@+id/radio_button_female"
+                    android:layout_width="137dp"
+                    android:layout_height="38dp"
+                    android:layout_marginStart="40dp"
+                    android:text="Female" />
+            </RadioGroup>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginTop="90dp"
-                android:id="@+id/ece_intent"
-                android:text="Fill Form"
-                android:onClick="Fill_form"
-                android:textSize="12sp" />
-        </androidx.cardview.widget.CardView>
+                android:layout_marginTop="12dp">
 
-        <androidx.cardview.widget.CardView
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/enter_entrance_marks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter your Entrance Exam Marks"
+                    android:inputType="number"
+                    android:maxLength="5"
+                    android:textColor="#000" />
 
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="410dp"
-            android:layout_marginEnd="1dp"
-            app:cardBackgroundColor="@color/white"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="10dp"
-            app:cardMaxElevation="12dp"
-            app:cardPreventCornerOverlap="true"
-            app:cardUseCompatPadding="true"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="parent"
-            app:layout_constraintStart_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="parent">
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <ImageView
-
-                android:layout_width="141dp"
-                android:layout_height="127dp"
-                android:layout_gravity="center"
-                android:layout_marginStart="-55dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="40dp"
-                android:layout_marginBottom="10dp"
-
-                android:src="@drawable/ic_baseline_electrical_services_24" />
-
-            <TextView
-                android:layout_width="185dp"
-                android:layout_height="51dp"
-                android:layout_gravity="bottom|center_horizontal"
-                android:layout_marginStart="69dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="100dp"
-                android:text="Electrical and Electronics Engineering"
-                android:textColor="#144970"
-                android:textSize="15sp"
-                android:textStyle="bold" />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/eee_intent"
-                android:layout_width="176dp"
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="160dp"
-                android:layout_marginTop="90dp"
-                android:text="Fill Form"
-                android:onClick="Fill_form"
-                android:textSize="12sp" />
-        </androidx.cardview.widget.CardView>
+                android:layout_marginTop="12dp">
 
-        <androidx.cardview.widget.CardView
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/input_phone_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Contact No"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:textColor="#000" />
 
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="610dp"
-            android:layout_marginEnd="1dp"
-            app:cardBackgroundColor="@color/white"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="10dp"
-            app:cardMaxElevation="12dp"
-            app:cardPreventCornerOverlap="true"
-            app:cardUseCompatPadding="true"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="parent"
-            app:layout_constraintStart_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="parent">
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <ImageView
 
-                android:layout_width="141dp"
-                android:layout_height="127dp"
-                android:layout_gravity="center"
-                android:layout_marginStart="-55dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="40dp"
-                android:layout_marginBottom="10dp"
-
-                android:src="@drawable/ic_baseline_handyman_24" />
 
             <TextView
-                android:layout_width="187dp"
-                android:layout_height="36dp"
-                android:layout_gravity="bottom|center_horizontal"
-                android:layout_marginStart="69dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="100dp"
-                android:text="Mechanical Engineering"
                 android:textColor="#144970"
-                android:textSize="15sp"
+                android:layout_width="290dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="150dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="161dp"
+                android:text="Select your Course"
+                android:textSize="22sp"
                 android:textStyle="bold" />
 
-            <com.google.android.material.button.MaterialButton
-                android:layout_width="158dp"
-                android:layout_height="45dp"
-                android:layout_marginStart="180dp"
-                android:layout_marginTop="90dp"
-                android:id="@+id/Mech_intent"
-                android:text="Fill Form"
+         <RadioGroup
+             android:layout_width="wrap_content"
+             android:layout_marginTop="20dp"
+             android:id="@+id/radio_button_course"
+             android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/ME"
+                android:layout_width="325dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="00dp"
 
-                android:onClick="Fill_form"
-                android:textSize="12sp" />
-        </androidx.cardview.widget.CardView>
+                android:text="Bachelor of Technology"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.794" />
 
-        <androidx.cardview.widget.CardView
+            <RadioButton
+                android:id="@+id/PE"
+                android:layout_width="325dp"
+                android:layout_height="wrap_content"
+                android:text="Master of Technology"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.893" />
 
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="810dp"
-            android:layout_marginEnd="1dp"
-            app:cardBackgroundColor="@color/white"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="10dp"
-            app:cardMaxElevation="12dp"
-            app:cardPreventCornerOverlap="true"
-            app:cardUseCompatPadding="true"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="parent"
-            app:layout_constraintStart_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="parent">
-
-            <ImageView
-
-                android:layout_width="141dp"
-                android:layout_height="127dp"
-                android:layout_gravity="center"
-                android:layout_marginStart="-55dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="40dp"
-                android:layout_marginBottom="10dp"
-
-                android:src="@drawable/ic_baseline_groups_24" />
-
-            <TextView
-                android:layout_width="187dp"
-                android:layout_height="36dp"
-                android:layout_gravity="bottom|center_horizontal"
-                android:layout_marginStart="69dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="100dp"
-                android:text="Bachelor of Bussiness Administration"
-                android:textColor="#144970"
-                android:textSize="15sp"
-                android:textStyle="bold" />
-
-            <com.google.android.material.button.MaterialButton
-                android:layout_width="193dp"
-                android:layout_height="45dp"
-                android:layout_marginStart="160dp"
-                android:layout_marginTop="90dp"
-                android:id="@+id/BBA_intent"
-                android:onClick="Fill_form"
-                android:text="Fill Form"
-                android:textSize="12sp" />
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="1010dp"
-            android:layout_marginEnd="1dp"
-            app:cardBackgroundColor="@color/white"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="10dp"
-            app:cardMaxElevation="12dp"
-            app:cardPreventCornerOverlap="true"
-            app:cardUseCompatPadding="true"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="parent"
-            app:layout_constraintStart_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="parent">
-
-            <ImageView
-
-                android:layout_width="141dp"
-                android:layout_height="127dp"
-                android:layout_gravity="center"
-                android:layout_marginStart="-55dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="40dp"
-                android:layout_marginBottom="10dp"
-
-                android:src="@drawable/ic_baseline_laptop_mac_24" />
-
-            <TextView
-                android:layout_width="187dp"
-                android:layout_height="36dp"
-                android:layout_gravity="bottom|center_horizontal"
-                android:layout_marginStart="69dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="100dp"
+             <RadioButton
+                android:id="@+id/EEE"
+                android:layout_width="328dp"
+                android:layout_height="wrap_content"
                 android:text="Bachelor of Computer Application"
-                android:textColor="#144970"
-                android:textSize="15sp"
-                android:textStyle="bold" />
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.52"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.598" />
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/BCA_intent"
-                android:layout_width="wrap_content"
+            <RadioButton
+                android:id="@+id/IT"
+                android:layout_width="327dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="160dp"
-                android:layout_marginTop="90dp"
-                android:text="Fill Form"
-
-               android:onClick="Fill_form"
-
-                android:textSize="12sp" />
-        </androidx.cardview.widget.CardView>
-
+                android:text="Bachelor of Bussiness Administartion"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.52"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.694" />
 
 
+            <RadioButton
 
+                android:id="@+id/ECE"
+                android:layout_width="327dp"
+                android:layout_height="wrap_content"
+                android:text="Master of Computer Application"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.52"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.499" />
+
+            <RadioButton
+                android:id="@+id/CSE"
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:text="Master of Bussiness Administration"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.52"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.395" />
+
+
+         </RadioGroup>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="20dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/Adreess"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Residential Address"
+                    android:inputType="text"
+                    android:maxLength="50"
+                    android:textColor="#000" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:id="@+id/submit_doc"
+                android:layout_width="338dp"
+                android:layout_height="49dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="40dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#144970"
+                android:text="Click Here to Submit your Documents" />
+
+            <androidx.constraintlayout.utils.widget.MotionButton
+                android:id="@+id/fil_form"
+                android:layout_width="325dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="40dp"
+                android:background="#144970"
+                android:text="Submit"
+                android:textColor="@color/white"
+                android:textSize="22sp" />
+
+
+
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="351dp"
+            android:layout_height="64dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="1100dp"
+            android:layout_marginEnd="30dp"
+            android:text="I agree that all the information provided by me is correct to the best of my knowledge."
+            android:textColor="#144970"
+            android:textStyle="bold"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
     </RelativeLayout>
 
 </ScrollView>
