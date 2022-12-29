@@ -9,18 +9,14 @@
     tools:context=".LoginActivity">
 
 
-    <ViewFlipper
-        android:id="@+id/v_flipper"
-        android:layout_width="362dp"
-        android:layout_height="252dp"
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="273dp"
 
-        android:layout_marginStart="00dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="00dp"
-        android:layout_marginBottom="00dp" />
+        android:src="@drawable/bitian"/>
 
 
-        <com.google.android.material.textfield.TextInputLayout
+    <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_marginTop="50dp"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -107,9 +103,10 @@
         android:textStyle="bold" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/google_sigin"
         android:layout_width="110dp"
         android:layout_height="87dp"
+        android:scaleType="fitCenter"
         android:layout_marginStart="250dp"
         android:layout_marginTop="-90dp"
         app:srcCompat="@drawable/common_google_signin_btn_icon_dark" />

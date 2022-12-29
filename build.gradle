@@ -1,4 +1,9 @@
 buildscript {
+    ext.kotlin_version = "1.4.10"
+    repositories {
+        google()
+        jcenter()
+    }
     dependencies {
         classpath 'com.google.gms:google-services:4.3.14'
     }
@@ -8,7 +13,13 @@ plugins {
     id 'com.android.library' version '7.2.1' apply false
     id 'org.jetbrains.kotlin.android' version '1.7.20' apply false
 }
-
+//
+//allprojects {
+//    repositories {
+//        google()
+//        jcenter()
+//    }
+//}
 task clean(type: Delete) {
     delete rootProject.buildDir
 }

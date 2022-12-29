@@ -1,9 +1,5 @@
 package com.example.se_firebase;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -12,9 +8,11 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.ViewFlipper;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -24,7 +22,10 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginActivity extends AppCompatActivity {
 
-
+//
+//    //Google Signin Authentication
+//    SignInButton GoogleSigin;
+//         GoogleSignInClient mGoogleSiginClient;
 
     TextInputEditText etLoginEmail;
     TextInputEditText etLoginPassword;
@@ -39,7 +40,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
     // //For automatic image flipping/movement this widget is used
-    ViewFlipper v_flippper;
+   // ViewFlipper v_flippper;
     FirebaseAuth mAuth;
     @SuppressLint("MissingInflatedId")
     @Override
@@ -48,24 +49,42 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
 
+//        processrequest();
+//
+//        GoogleSigin=(SignInButton) findViewById(R.id.google_sigin);
+//
+//      GoogleSigin.setOnClickListener(new View.OnClickListener() {
+//          @Override
+//          public void onClick(View view) {
+//              processLogin();
+//          }
+//      });
+//
+//
 
 
 
-        //For flipping the images in main page
-        int images[]={R.drawable.bitm,R.drawable.programs,R.drawable.bitmesra,R.drawable.nriadmission,R.drawable.bitdeoghar,R.drawable.bitaward,R.drawable.awards12};
 
 
-        v_flippper=findViewById(R.id.v_flipper);
-//for loop
-     /*   for(int i=0;i<image.length;i++){
-            flipperImages(image(i));
-        }*/
-//but I prefer Forreach
-        for(int image: images)
-        {
-            flipperImages(image);
-        }
 
+
+
+
+//        //For flipping the images in main page
+//        int images[]={R.drawable.bitm,R.drawable.programs,R.drawable.bitmesra,R.drawable.nriadmission,R.drawable.bitdeoghar,R.drawable.bitaward,R.drawable.awards12};
+//
+//
+//        v_flippper=findViewById(R.id.v_flipper);
+////for loop
+//     /*   for(int i=0;i<image.length;i++){
+//            flipperImages(image(i));
+//        }*/
+////but I prefer Forreach
+//        for(int image: images)
+//        {
+//            flipperImages(image);
+//        }
+//
 
         //Otp login
         login_otp=findViewById(R.id.login_otp);
@@ -105,6 +124,45 @@ public class LoginActivity extends AppCompatActivity {
             startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
         });
     }
+//
+//    private void processLogin() {
+//        Intent siginIntent=mGoogleSiginClient.getSignInIntent();
+//        startActivityForResult(siginIntent,101);
+//    }
+//
+//
+//    //Google Sigin
+//    private void processrequest(){
+//
+//        GoogleSignInOptions gso=new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+//                .requestIdToken(getString(R.string.default_web_client_id))
+//                .requestEmail()
+//                .build();
+//
+//
+//        //Build a googlesigin Client with the options specified by gso
+//        mGoogleSiginClient = GoogleSigin.getClient(this,gso);
+//
+//    }
+//
+//    @Override
+//    public void onActivityResult(int requestCode, int resultCode, Intent data)
+//    {
+//        super.onActivityResult(requestCode,resultCode,data);
+//        //Result returned from launching the Intent from GoogleSigin.getSiginIntent(..);
+//
+//        if(requestCode ==101){
+//            Task<GoogleSignInAccount> task=GoogleSigin.getSignedInAccountFromIntent(data);
+//            try{
+//                GoogleSignInAccount account=task.getResult(ApiException.class);
+//                firebaseAuthWithGoogle(account.getIdToken());
+//            }
+//            catch (ApiException e){
+//
+//            }
+//        }
+//    }
+
     private void loginUser(){
         String email = etLoginEmail.getText().toString();
         String password = etLoginPassword.getText().toString();
@@ -129,23 +187,23 @@ public class LoginActivity extends AppCompatActivity {
             });
         }
     }
-
-    public  void flipperImages(int image){
-        ImageView imageView=new ImageView(this);
-        imageView.setBackgroundResource(image);
-
-
-
-        v_flippper.addView(imageView);
-        v_flippper.setFlipInterval(1500);//2sec
-        v_flippper.setAutoStart(true);
-
-
-
-        //animation
-        v_flippper.setInAnimation(this, android.R.anim.slide_in_left);
-        v_flippper.setOutAnimation(this, android.R.anim.slide_out_right);
-    }
+//
+//    public  void flipperImages(int image){
+//        ImageView imageView=new ImageView(this);
+//        imageView.setBackgroundResource(image);
+//
+//
+//
+//        v_flippper.addView(imageView);
+//        v_flippper.setFlipInterval(1500);//2sec
+//        v_flippper.setAutoStart(true);
+//
+//
+//
+//        //animation
+//        v_flippper.setInAnimation(this, android.R.anim.slide_in_left);
+//        v_flippper.setOutAnimation(this, android.R.anim.slide_out_right);
+//    }
 
     //Are you sure you want to exit dialog interface
     @Override

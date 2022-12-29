@@ -1,17 +1,15 @@
 package com.example.se_firebase;
 
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.app.AppCompatDelegate;
-import androidx.cardview.widget.CardView;
-
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.ViewFlipper;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
+import androidx.cardview.widget.CardView;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -37,7 +35,7 @@ public class MainActivity<v_flippper, images> extends AppCompatActivity {
     Button chatbot;
 
     // //For automatic image flipping/movement this widget is used
-        ViewFlipper v_flippper;
+    //    ViewFlipper v_flippper;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -159,21 +157,22 @@ public class MainActivity<v_flippper, images> extends AppCompatActivity {
             startActivity(new Intent(MainActivity.this, LoginActivity.class));
         });
 
-        //For flipping the images in main page
-        int images[]={R.drawable.bitm,R.drawable.programs,R.drawable.bitmesra,R.drawable.bitaw,R.drawable.bitdeoghar,R.drawable.bitaward,R.drawable.bitawards,R.drawable.nriadmission};
-
-
-        v_flippper=findViewById(R.id.v_flipper);
-//for loop
-     /*   for(int i=0;i<image.length;i++){
-            flipperImages(image(i));
-        }*/
-//but I prefer Forreach
-        for(int image: images)
-        {
-            flipperImages(image);
-        }
-
+//        //For flipping the images in main page
+//        int images[]={R.drawable.bitm,R.drawable.programs,R.drawable.bitmesra,R.drawable.bitaw,R.drawable.bitdeoghar,R.drawable.bitaward,R.drawable.bitawards,R.drawable.nriadmission};
+//
+//
+//        v_flippper=findViewById(R.id.v_flipper);
+////for loop
+//     /*   for(int i=0;i<image.length;i++){
+//            flipperImages(image(i));
+//        }*/
+////but I prefer Forreach
+//        for(int image: images)
+//        {
+//            flipperImages(image);
+//        }
+//
+//
     }
     protected void onStart() {
         super.onStart();
@@ -183,23 +182,23 @@ public class MainActivity<v_flippper, images> extends AppCompatActivity {
         }
     }
 
-
-    public  void flipperImages(int image){
-        ImageView imageView=new ImageView(this);
-        imageView.setBackgroundResource(image);
-
-
-
-        v_flippper.addView(imageView);
-        v_flippper.setFlipInterval(1500);//2sec
-        v_flippper.setAutoStart(true);
-
-
-
-        //animation
-        v_flippper.setInAnimation(this, android.R.anim.slide_in_left);
-        v_flippper.setOutAnimation(this, android.R.anim.slide_out_right);
-    }
+//
+//    public  void flipperImages(int image){
+//        ImageView imageView=new ImageView(this);
+//        imageView.setBackgroundResource(image);
+//
+//
+//
+//        v_flippper.addView(imageView);
+//        v_flippper.setFlipInterval(1500);//2sec
+//        v_flippper.setAutoStart(true);
+//
+//
+//
+//        //animation
+//        v_flippper.setInAnimation(this, android.R.anim.slide_in_left);
+//        v_flippper.setOutAnimation(this, android.R.anim.slide_out_right);
+//    }
 
 
     //Are you sure you want to exit dialog interface
