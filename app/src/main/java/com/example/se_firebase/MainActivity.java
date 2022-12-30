@@ -33,6 +33,7 @@ public class MainActivity<v_flippper, images> extends AppCompatActivity {
     FirebaseAuth mAuth;
 CardView ERP_Login;
 
+    CardView Cutoff;
     Button chatbot;
 
     // //For automatic image flipping/movement this widget is used
@@ -46,6 +47,15 @@ CardView ERP_Login;
 
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
 
+        //Activity Intent
+        Cutoff=(CardView) findViewById(R.id.cut_off);
+        Cutoff.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(MainActivity.this,cutoff_analysis.class);
+                startActivity(intent);
+            }
+        });
 
 
         //Activity Intent
