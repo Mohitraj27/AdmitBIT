@@ -1,5 +1,6 @@
 package com.example.se_firebase;
 
+import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -30,12 +31,13 @@ public class MainActivity<v_flippper, images> extends AppCompatActivity {
     //Firebase
     Button btnLogOut;
     FirebaseAuth mAuth;
-
+CardView ERP_Login;
 
     Button chatbot;
 
     // //For automatic image flipping/movement this widget is used
     //    ViewFlipper v_flippper;
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,12 +46,28 @@ public class MainActivity<v_flippper, images> extends AppCompatActivity {
 
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
 
+
+
         //Activity Intent
-        Notification_intent=findViewById(R.id.notification_alert);
+        ERP_Login=(CardView) findViewById(R.id.erp_login);
+        ERP_Login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(MainActivity.this,contact_web.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+
+
+        //Activity Intent
+        Notification_intent=(CardView) findViewById(R.id.btn_start_web_view);
         Notification_intent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(MainActivity.this,Notification_alert.class);
+                Intent intent=new Intent(MainActivity.this,web_notification.class);
                 startActivity(intent);
             }
         });

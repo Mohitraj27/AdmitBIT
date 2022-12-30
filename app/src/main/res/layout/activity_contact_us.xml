@@ -51,7 +51,7 @@
         <Button
             android:layout_width="200dp"
             android:layout_height="50dp"
-            android:onClick="Email_bit_intent"
+            android:id="@+id/Email_bit_intent"
             android:layout_marginStart="100dp"
             android:layout_marginTop="160dp"
             android:text="@string/more_details" />
@@ -110,7 +110,7 @@ Phone : 746388110"
             android:src="@drawable/ic_baseline_mark_email_read_24" />
 
         <Button
-            android:onClick="email_1_intent"
+            android:id="@+id/extra_intent"
             android:layout_width="200dp"
             android:layout_height="50dp"
             android:layout_marginStart="100dp"

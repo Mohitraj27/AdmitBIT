@@ -30,8 +30,8 @@ public class Seat_acceptance extends AppCompatActivity {
     private Button Confirm_submit;//Procced_to_pay;
 
 
-    private FirebaseDatabase db=FirebaseDatabase.getInstance();
-    private DatabaseReference root=db.getReference().child("Seat Acceptance");
+    FirebaseDatabase db=FirebaseDatabase.getInstance();
+     DatabaseReference root=db.getReference().child("Seat Acceptance");
 
     private String seat_upgrade="Unknown";
     private RadioGroup radioGroup1;

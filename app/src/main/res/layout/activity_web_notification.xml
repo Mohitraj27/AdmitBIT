@@ -4,11 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Allotment_list_campus">
-<ListView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="5dp"
-    android:id="@+id/mylistView"/>
+    tools:context=".web_notification">
 
+    <WebView
+        android:id="@+id/my_webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 </LinearLayout>
