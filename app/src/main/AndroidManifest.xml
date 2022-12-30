@@ -17,6 +17,41 @@
         android:theme="@style/Theme.SE_firebase"
         tools:targetApi="31">
         <activity
+            android:name=".webPage_view"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".fb_web_view"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Linkedin"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".insta_web"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".youtube_web"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".cutoff_analysis"
             android:exported="false"
             android:label="Predict your Rank">
@@ -224,7 +259,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:label="Admission Module">
+            android:label="Admission">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

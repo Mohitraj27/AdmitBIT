@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -36,9 +37,13 @@ CardView ERP_Login;
     CardView Cutoff;
     Button chatbot;
 
+
+    //Social Links
+    ImageView Youtube,insta,linkedin,fb,web_page;
+
     // //For automatic image flipping/movement this widget is used
     //    ViewFlipper v_flippper;
-    @SuppressLint("MissingInflatedId")
+    @SuppressLint({"MissingInflatedId"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,6 +51,64 @@ CardView ERP_Login;
 
 
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+
+
+        web_page=findViewById(R.id.web_page);
+        web_page.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(MainActivity.this,webPage_view.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+
+        fb=findViewById(R.id.facebook_view);
+        fb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(MainActivity.this,fb_web_view.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+        linkedin=findViewById(R.id.linkedin_view);
+        linkedin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(MainActivity.this,Linkedin.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+        insta=findViewById(R.id.insta_web);
+        insta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(MainActivity.this,insta_web.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+        //Youtube webpage intent
+        Youtube=findViewById(R.id.youtube_web);
+        Youtube.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(MainActivity.this,youtube_web.class);
+                startActivity(intent);
+            }
+        });
+
+
 
         //Activity Intent
         Cutoff=(CardView) findViewById(R.id.cut_off);

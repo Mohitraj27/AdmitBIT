@@ -5,20 +5,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="24dp"
     tools:context=".LoginActivity">
 
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="273dp"
-
-        android:src="@drawable/bitian"/>
+       android:layout_marginTop="-0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bitm"/>
 
 
     <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="0dp"
+        android:padding="14dp"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_height="wrap_content">
 
@@ -36,6 +37,8 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_height="wrap_content"
             app:passwordToggleEnabled="true"
+
+            android:padding="14dp"
             android:layout_marginTop="12dp">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -52,15 +55,17 @@
         android:id="@+id/btnLogin"
         android:layout_width="168dp"
         android:layout_height="48dp"
+         android:layout_marginLeft="20dp"
 
-        android:layout_marginTop="54dp"
+        android:layout_marginTop="30dp"
         android:text="Login" />
 
     <com.google.android.material.button.MaterialButton
             android:id="@+id/tvRegisterHere"
             android:layout_width="156dp"
             android:layout_height="48dp"
-            android:layout_marginStart="190dp"
+
+            android:layout_marginStart="220dp"
             android:layout_marginTop="-47dp"
             android:text="Sign Up"
 
@@ -71,7 +76,8 @@
         android:id="@+id/Admin_btnLogin"
         android:layout_width="112dp"
         android:layout_height="79dp"
-        android:layout_marginStart="130dp"
+
+        android:layout_marginStart="150dp"
         android:layout_marginTop="4dp"
         android:src="@drawable/ic_baseline_admin_panel_settings_24"
         android:textColor="@color/purple_700"
@@ -83,12 +89,15 @@
         android:layout_height="77dp"
         android:layout_marginTop="-90dp"
         android:id="@+id/login_otp"
+        android:layout_marginLeft="20dp"
         android:src="@drawable/ic_baseline_phonelink_lock_24"></ImageView>
 
     <TextView
         android:layout_width="126dp"
         android:layout_height="32dp"
         android:text="Login Using OTP"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="0dp"
         android:textColor="@color/purple_700"
         android:textStyle="bold" />
 
@@ -96,7 +105,7 @@
         android:id="@+id/textView2"
         android:layout_width="106dp"
         android:layout_height="29dp"
-        android:layout_marginStart="140dp"
+        android:layout_marginStart="160dp"
         android:layout_marginTop="-30dp"
         android:text="Admin Login"
         android:textColor="@color/purple_700"
@@ -107,7 +116,7 @@
         android:layout_width="110dp"
         android:layout_height="87dp"
         android:scaleType="fitCenter"
-        android:layout_marginStart="250dp"
+        android:layout_marginStart="280dp"
         android:layout_marginTop="-90dp"
         app:srcCompat="@drawable/common_google_signin_btn_icon_dark" />
 </LinearLayout>

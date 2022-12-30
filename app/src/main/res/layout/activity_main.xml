@@ -13,6 +13,55 @@
         android:layout_height="match_parent"
         >
 
+        <ImageView
+            android:id="@+id/web_page"
+            android:layout_width="wrap_content"
+            android:layout_height="57dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="2232dp"
+            android:layout_marginEnd="331dp"
+            app:srcCompat="@drawable/ic_baseline_public_24" />
+
+        <ImageView
+            android:id="@+id/linkedin_view"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="261dp"
+            android:layout_marginTop="2233dp"
+            android:layout_marginEnd="86dp"
+            app:srcCompat="@drawable/linkedin" />
+
+        <ImageView
+            android:id="@+id/insta_web"
+            android:layout_width="wrap_content"
+            android:layout_height="53dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="183dp"
+            android:layout_marginTop="2234dp"
+            android:layout_marginEnd="166dp"
+            app:srcCompat="@drawable/insta" />
+
+        <ImageView
+            android:id="@+id/youtube_web"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="108dp"
+            android:layout_marginTop="2232dp"
+            android:layout_marginEnd="244dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/yt" />
+
         <androidx.cardview.widget.CardView
             android:id="@+id/erp_login"
             android:layout_width="397dp"
@@ -53,6 +102,51 @@
                 android:layout_marginTop="30dp"
                 android:layout_marginBottom="20dp"
                 android:text="ERP Login"
+                android:textColor="#144970"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/holiday_list"
+            android:layout_width="397dp"
+            android:layout_height="149dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="2000dp"
+            android:layout_marginEnd="4dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="10dp"
+            app:cardMaxElevation="12dp"
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="parent">
+
+            <ImageView
+
+                android:layout_width="122dp"
+                android:layout_height="105dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="-55dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+
+                android:src="@drawable/ic_baseline_calendar_month_24" />
+
+            <TextView
+                android:layout_width="131dp"
+                android:layout_height="35dp"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginStart="90dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="20dp"
+                android:text="Holiday List"
                 android:textColor="#144970"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -562,11 +656,38 @@
                 android:layout_marginStart="90dp"
                 android:layout_marginTop="30dp"
                 android:layout_marginBottom="20dp"
-                android:text="Notification Alert"
+                android:text="Current Notification"
                 android:textColor="#144970"
-                android:textSize="17sp"
+                android:textSize="15sp"
                 android:textStyle="bold" />
         </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:id="@+id/facebook_view"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="339dp"
+            android:layout_marginTop="2232dp"
+            android:layout_marginEnd="13dp"
+            app:srcCompat="@drawable/fb" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="166dp"
+            android:layout_height="35dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="2190dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="230dp"
+            android:textSize="20sp"
+            android:textColor="#144970"
+            android:textStyle="bold"
+            android:text="Social Links" />
 
 
     </RelativeLayout>
