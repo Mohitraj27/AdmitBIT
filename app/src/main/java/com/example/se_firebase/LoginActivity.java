@@ -31,7 +31,7 @@ public class LoginActivity extends AppCompatActivity {
     TextInputEditText etLoginPassword;
     Button tvRegisterHere;
     Button btnLogin;
-
+ImageView Erp_login;
     ImageView login_otp;
 
     //Admin Login / SignUp
@@ -84,6 +84,18 @@ public class LoginActivity extends AppCompatActivity {
 //        {
 //            flipperImages(image);
 //        }
+//
+
+
+        //ERp Login
+
+//        Erp_login=findViewById(R.id.erp_login);
+//        Erp_login.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent=new Intent(LoginActivity.this,contact_web.class);
+//            }
+//        });
 //
 
         //Otp login

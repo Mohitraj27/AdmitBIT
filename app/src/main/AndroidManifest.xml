@@ -17,6 +17,13 @@
         android:theme="@style/Theme.SE_firebase"
         tools:targetApi="31">
         <activity
+            android:name=".voiceFlow_chatbit"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".webPage_view"
             android:exported="false">
             <meta-data

@@ -34,8 +34,9 @@ public class MainActivity<v_flippper, images> extends AppCompatActivity {
     FirebaseAuth mAuth;
 CardView ERP_Login;
 
+
     CardView Cutoff;
-    Button chatbot;
+//    Button chatbot;
 
 
     //Social Links
@@ -51,6 +52,18 @@ CardView ERP_Login;
 
 
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+
+
+//
+//        chatbot=findViewById(R.id.chatbot);
+//        chatbot.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent=new Intent(MainActivity.this,voiceFlow_chatbit.class);
+//                startActivity(intent);
+//            }
+//        });
+
 
 
         web_page=findViewById(R.id.web_page);
